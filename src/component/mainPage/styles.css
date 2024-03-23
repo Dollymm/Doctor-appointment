@@ -1,0 +1,9 @@
+.bg-custom{
+    background-image: url('https://img.freepik.com/premium-photo/stethoscope-red-background_834769-118.jpg?w=1060');
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: center; */
+    position: relative;
+    z-index: 1;
+    /* opacity: 0.8; */
+}
