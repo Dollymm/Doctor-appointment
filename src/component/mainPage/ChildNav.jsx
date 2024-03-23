@@ -30,16 +30,16 @@ const ChildNav = () => {
         open={isDrawerOpen} // Toggle drawer state
         sx={{
           '& .MuiDrawer-paper': {
-            backgroundColor: 'rgba(156, 163, 175, 0.6)', // Set background color to transparent
-            border: 'none', // Remove border
-            boxShadow: 'none', // Remove shadow
+            backgroundColor: '#95bedc', // Set background color to transparent
+            border: 'white', // Remove border
+            // Remove shadow
           },
         }}
       >
         <IconButton onClick={toggleDrawer} aria-label="close drawer" sx={{ alignSelf: 'flex-end', marginRight: 0 }}>
           <CloseIcon  />
         </IconButton>
-        <List className='h-full text-black-100 bg-gray-300 '>
+        <List className='h-full text-black-100 bg-indigo-300 '>
           <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
             <ListItemIcon><CalendarMonthIcon /></ListItemIcon>
             <ListItemText primary="Book Appointment" />
