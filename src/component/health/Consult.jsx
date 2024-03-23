@@ -3,7 +3,7 @@ import {data} from '../../../data';
 
 const Consult = () => {
   return (
-    <div className="bg-gray-200 py-10">
+    <div className=" py-10">
       <div className="container mx-auto">
         <div className="text-center mb-8">
           <p className="text-3xl font-bold text-gray-800 mb-3">
