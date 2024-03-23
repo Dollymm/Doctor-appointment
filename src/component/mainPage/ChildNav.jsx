@@ -6,6 +6,7 @@ import FeedIcon from '@mui/icons-material/Feed';
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const ChildNav = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -17,7 +18,7 @@ const ChildNav = () => {
   return (
     <div>
       {/* Button to open drawer on small screens */}
-      <IconButton onClick={toggleDrawer} aria-label="open drawer" sx={{ display: { lg: 'none' ,md:'none' } }}>
+      <IconButton onClick={toggleDrawer} sx={{ display: { lg: 'none', md: 'none' } }}>
         <MenuIcon />
       </IconButton>
 
@@ -27,25 +28,35 @@ const ChildNav = () => {
         variant="temporary"
         onClose={toggleDrawer}
         open={isDrawerOpen} // Toggle drawer state
+        sx={{
+          '& .MuiDrawer-paper': {
+            backgroundColor: 'rgba(156, 163, 175, 0.6)', // Set background color to transparent
+            border: 'none', // Remove border
+            boxShadow: 'none', // Remove shadow
+          },
+        }}
       >
-        <List className='h-full bg-slate-300 text-black'>
-          <ListItem >
+        <IconButton onClick={toggleDrawer} aria-label="close drawer" sx={{ alignSelf: 'flex-end', marginRight: 0 }}>
+          <CloseIcon  />
+        </IconButton>
+        <List className='h-full text-black-100 bg-gray-300 '>
+          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
             <ListItemIcon><CalendarMonthIcon /></ListItemIcon>
             <ListItemText primary="Book Appointment" />
           </ListItem>
-          <ListItem >
+          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
             <ListItemIcon><MedicalServicesIcon /></ListItemIcon>
             <ListItemText primary="Treatment" />
           </ListItem>
-          <ListItem >
+          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
             <ListItemIcon><QuestionAnswerIcon /></ListItemIcon>
             <ListItemText primary="Ask a Question" />
           </ListItem>
-          <ListItem >
+          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
             <ListItemIcon><AccountCircleIcon /></ListItemIcon>
             <ListItemText primary="Plan My Surgery" />
           </ListItem>
-          <ListItem>
+          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
             <ListItemIcon><FeedIcon /></ListItemIcon>
             <ListItemText primary="Health Feed" />
           </ListItem>

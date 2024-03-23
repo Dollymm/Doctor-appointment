@@ -1,5 +1,5 @@
 import React from 'react';
-import data from '../../../data';
+import {data} from '../../../data';
 
 const Consult = () => {
   return (
@@ -25,7 +25,7 @@ const Consult = () => {
           ))}
         </div>
         <div className="flex justify-center mt-6">
-          <button className="bg-red-900 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-full w-[200px]">
+          <button className='border border-red-800  hover:bg-gray-400   text-black rounded-lg px-2 py-2 font-semibold transition duration-300 w-[200px] mx-auto'>
             View more specialties
           </button>
         </div>

@@ -1,4 +1,4 @@
-const data = [
+ export const data = [
     {
         id: '1',
         img: 'https://st4.depositphotos.com/11953928/23917/v/950/depositphotos_239176110-stock-illustration-fallopian-tubes-uterus-human-anatomy.jpg',
@@ -32,4 +32,31 @@ const data = [
    
 ];
 
-export default data;
+export const doctor=[
+    {
+        id:'1',
+        img:'https://www.shutterstock.com/shutterstock/photos/1533881711/display_1500/stock-vector-cartoon-doctor-medical-doctor-in-white-coat-showing-greeting-gesture-vector-illustration-isolated-1533881711.jpg',
+        name:'Dr. Nithin ',
+        experience:'12 years of experince',
+        specilazation:'MBBS,DPM-Pschiatry',
+        hospital:'Saravni Hostipitasl,Hyderabad'
+    },
+    {
+        id:'2',
+        img:'https://www.shutterstock.com/shutterstock/photos/1533881711/display_1500/stock-vector-cartoon-doctor-medical-doctor-in-white-coat-showing-greeting-gesture-vector-illustration-isolated-1533881711.jpg',
+        name:'Dr. Nithin ',
+        experience:'12 years of experince',
+        specilazation:'MBBS,DPM-Pschiatry',
+        hospital:'Saravni Hostipitasl,Hyderabad'
+    },
+    {
+        id:'3',
+        img:'https://www.shutterstock.com/shutterstock/photos/1533881711/display_1500/stock-vector-cartoon-doctor-medical-doctor-in-white-coat-showing-greeting-gesture-vector-illustration-isolated-1533881711.jpg',
+        name:'Dr. Nithin ',
+        experience:'12 years of experince',
+        specilazation:'MBBS,DPM-Pschiatry',
+        hospital:'Saravni Hostipitasl,Hyderabad'
+    }
+]
+
+
