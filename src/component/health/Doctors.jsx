@@ -6,7 +6,7 @@ const Doctors = () => {
     <div className="w-full md:w-3/5 mx-auto px-4 mb-4">
       <h2 className="text-2xl font-bold mb-4">Popular Doctors Available</h2>
       {doctor.map((dr) => (
-        <div key={dr.id} className="bg-indigo-300 rounded-lg shadow-md p-4 mb-4">
+        <div key={dr.id} className="bg-white rounded-lg shadow-md p-4 mb-4">
           <div className="flex flex-wrap md:flex-nowrap items-center">
             <div className="md:w-1/4 md:mr-4 md:text-center mb-4 md:mb-0">
             

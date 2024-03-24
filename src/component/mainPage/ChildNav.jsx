@@ -39,7 +39,7 @@ const ChildNav = () => {
         <IconButton onClick={toggleDrawer} aria-label="close drawer" sx={{ alignSelf: 'flex-end', marginRight: 0 }}>
           <CloseIcon  />
         </IconButton>
-        <List className='h-full text-black-100 bg-indigo-300 '>
+        <List className='h-full text-black-100 bg-blue-100 '>
           <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
             <ListItemIcon><CalendarMonthIcon /></ListItemIcon>
             <ListItemText primary="Book Appointment" />

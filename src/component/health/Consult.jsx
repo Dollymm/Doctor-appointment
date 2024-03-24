@@ -15,7 +15,7 @@ const Consult = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {data.map((item, id) => (
-            <div key={id} className="text-center bg-indigo-300 p-6 rounded-lg shadow-md">
+            <div key={id} className="text-center bg-white p-6 rounded-lg shadow-md">
               <img src={item.img} alt={item.description} className="mx-auto w-24 h-24 rounded-full mb-4" />
               <p className="text-lg font-semibold mb-2">{item.description}</p>
               <button className="bg-red-900 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-full">
