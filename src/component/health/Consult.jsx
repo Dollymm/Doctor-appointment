@@ -25,7 +25,7 @@ const Consult = () => {
           ))}
         </div>
         <div className="flex justify-center mt-6">
-          <button className='border border-red-800  hover:bg-gray-400   text-black rounded-lg px-2 py-2 font-semibold transition duration-300 w-[200px] mx-auto'>
+          <button className='border border-red-800  hover:bg-red-900   text-black rounded-lg px-2 py-2 font-semibold transition duration-300 w-[200px] mx-auto'>
             View more specialties
           </button>
         </div>

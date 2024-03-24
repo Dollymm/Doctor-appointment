@@ -30,7 +30,7 @@ const ChildNav = () => {
         open={isDrawerOpen} // Toggle drawer state
         sx={{
           '& .MuiDrawer-paper': {
-            backgroundColor: '#95bedc', // Set background color to transparent
+            backgroundColor: '#a3c0cd', // Set background color to transparent
             border: 'white', // Remove border
             // Remove shadow
           },

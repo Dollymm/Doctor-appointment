@@ -38,7 +38,7 @@ const Doctors = () => {
         </div>
       ))}
       <div className="flex justify-center">
-  <button className="border border-red-800 hover:bg-gray-400 hover:text-white text-black rounded-lg px-2 py-2 font-semibold transition duration-300 w-48">View more</button>
+  <button className="border border-red-800 hover:bg-red-900 hover:text-white text-black rounded-lg px-2 py-2 font-semibold transition duration-300 w-48">View more</button>
 </div>
 
     </div>
