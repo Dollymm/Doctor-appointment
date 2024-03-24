@@ -15,17 +15,17 @@ const Consult = () => {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {data.map((item, id) => (
-            <div key={id} className="text-center bg-white p-6 rounded-lg shadow-md">
+            <div key={id} className="text-center bg-indigo-400 p-6 rounded-lg shadow-md">
               <img src={item.img} alt={item.description} className="mx-auto w-24 h-24 rounded-full mb-4" />
-              <p className="text-lg font-semibold mb-2">{item.description}</p>
-              <button className="bg-red-900 hover:bg-red-700 text-white font-semibold py-2 px-4 rounded-full">
+              <p className="text-lg font-semibold mb-2 text-white">{item.description}</p>
+              <button className=" border boder-indigo-500 bg-white hover:bg-blue-900 hover:text-white  text-black font-semibold py-2 px-4 rounded-full">
                 Consult Now
               </button>
             </div>
           ))}
         </div>
         <div className="flex justify-center mt-6">
-          <button className='border border-red-800  hover:bg-red-900   text-black rounded-lg px-2 py-2 font-semibold transition duration-300 w-[200px] mx-auto'>
+          <button className='border border-indigo-400  hover:bg-blue-900   hover:text-white rounded-lg px-2 py-2 font-semibold transition duration-300 w-[200px] mx-auto'>
             View more specialties
           </button>
         </div>
