@@ -39,25 +39,25 @@ const ChildNav = () => {
         <IconButton onClick={toggleDrawer} aria-label="close drawer" sx={{ alignSelf: 'flex-end', marginRight: 0 }}>
           <CloseIcon  />
         </IconButton>
-        <List className='h-full text-white hover:text-black bg-blue-900 '>
-          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
-            <ListItemIcon><CalendarMonthIcon /></ListItemIcon>
+        <List className='h-full text-white  bg-blue-900 '>
+          <ListItem >
+            <ListItemIcon><CalendarMonthIcon className='text-white' /></ListItemIcon>
             <ListItemText primary="Book Appointment" />
           </ListItem>
-          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
-            <ListItemIcon><MedicalServicesIcon /></ListItemIcon>
+          <ListItem >
+            <ListItemIcon><MedicalServicesIcon className='text-white' /></ListItemIcon>
             <ListItemText primary="Treatment" />
           </ListItem>
-          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
-            <ListItemIcon><QuestionAnswerIcon /></ListItemIcon>
+          <ListItem >
+            <ListItemIcon><QuestionAnswerIcon  className='text-white'/></ListItemIcon>
             <ListItemText primary="Ask a Question" />
           </ListItem>
-          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
-            <ListItemIcon><AccountCircleIcon /></ListItemIcon>
+          <ListItem >
+            <ListItemIcon><AccountCircleIcon  className='text-white'/></ListItemIcon>
             <ListItemText primary="Plan My Surgery" />
           </ListItem>
-          <ListItem button sx={{ '&:hover': { backgroundColor: '#F3F4F6' } }}>
-            <ListItemIcon><FeedIcon /></ListItemIcon>
+          <ListItem >
+            <ListItemIcon><FeedIcon  className='text-white'/></ListItemIcon>
             <ListItemText primary="Health Feed" />
           </ListItem>
         </List>

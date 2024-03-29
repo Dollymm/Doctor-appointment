@@ -1,11 +1,12 @@
-.bg-custom{
+.bg-custom {
+    /* Existing styles */
     background-image: url('https://kajabi-storefronts-production.kajabi-cdn.com/kajabi-storefronts-production/themes/2149915785/settings_images/T9HcvGjFQYyAKNXeQvtG_file.jpg');
     background-repeat: no-repeat;
-    background-size: 100% 100%; /* Ensure the image covers the entire element */
+    background-size: cover; /* Ensure the entire image is visible without distortion */
     background-position: center; /* Center the background image */
     position: relative;
     z-index: 1;
     height: 100vh; /* Cover entire viewport height */
-    width: 100vw; /* Cover entire viewport width */
-    /* opacity: 0.8; */
+    width: 100vw;
+
 }

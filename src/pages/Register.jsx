@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import Card from '@mui/material/Card';
+import {TimePicker} from 'antd'
 import { Link } from 'react-router-dom';
+
 
 const Register = () => {
     const [doctorInfo, setDoctorInfo] = useState({
@@ -8,8 +10,10 @@ const Register = () => {
         email: '',
         specialty: '',
         hospital: '',
+        experience:'',
         address: '',
         phoneNumber: '',
+        timing:[],
     });
 
     const handleChange = (e) => {
@@ -17,16 +21,24 @@ const Register = () => {
         setDoctorInfo((prevDoctorInfo) => ({ ...prevDoctorInfo, [name]: value }));
     };
 
+    const handleTimeChange=(value)=>{
+        
+        const formattedTime = value.map(time => moment(time).format('HH:mm')); 
+        setDoctorInfo((prevDoctorInfo)=>({...prevDoctorInfo,timing:formattedTime}))
+        console.log('selected Time Range:',value)
+       
+    }
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Here you can perform any actions with the doctor information, such as sending it to a server
+      
         console.log('Doctor information submitted:', doctorInfo);
-        // Reset the form after submission if needed
+     
         setDoctorInfo({
             name: '',
             email: '',
             specialty: '',
             hospital: '',
+            experience:'',
             address: '',
             phoneNumber: '',
         });
@@ -51,8 +63,14 @@ const Register = () => {
                             <label htmlFor="specialty" className="block text-gray-700 font-bold mb-2">Specialty</label>
                             <input type="text" id="specialty" name="specialty" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.specialty} onChange={handleChange} required />
                         </div>
+                        
                         <div>
-                            <label htmlFor="hospital" className="block text-gray-700 font-bold mb-2">Hospital</label>
+                            <label className="block text-gray-700 font-bold mb-2">Experience</label>
+                            <input type="number" id="experience" name="experience" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.experience} onChange={handleChange} required />
+                        </div>
+                        
+                        <div className="col-span-2">
+                            <label  className="block text-gray-700 font-bold mb-2">Hospital</label>
                             <input type="text" id="hospital" name="hospital" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.hospital} onChange={handleChange} required />
                         </div>
                         <div className="col-span-2">
@@ -63,8 +81,14 @@ const Register = () => {
                             <label htmlFor="phoneNumber" className="block text-gray-700 font-bold mb-2">Phone Number</label>
                             <input type="text" id="phoneNumber" name="phoneNumber" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.phoneNumber} onChange={handleChange} required />
                         </div>
+                        <div>
+
+                        <label htmlFor="phoneNumber" className="block text-gray-700 font-bold mb-2">Timing</label>
+                        <TimePicker.RangePicker className='border border-gray-300 rounded-md py-2 px-3 w-full ' onChange={handleTimeChange}/>
+                        </div>
                     </div>
                     <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-600 flex justify-center items-center w-1/2 mx-auto mt-4">Register</button>
+                   
                 </form>
             </Card>
         </div>
