@@ -52,16 +52,16 @@ const Register = () => {
                 <form onSubmit={handleSubmit}>
                     <div className="grid grid-cols-2 gap-4">
                         <div>
-                            <label htmlFor="name" className="block text-gray-700 font-bold mb-2">Name</label>
-                            <input type="text" id="name" name="name" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.name} onChange={handleChange} required />
+                            <label  className="block text-gray-700 font-bold mb-2">Name</label>
+                            <input type="text" name="name" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.name} onChange={handleChange} required />
                         </div>
                         <div>
-                            <label htmlFor="email" className="block text-gray-700 font-bold mb-2">Email</label>
-                            <input type="email" id="email" name="email" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.email} onChange={handleChange} required />
+                            <label  className="block text-gray-700 font-bold mb-2">Email</label>
+                            <input type="email" name="email" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.email} onChange={handleChange} required />
                         </div>
                         <div>
-                            <label htmlFor="specialty" className="block text-gray-700 font-bold mb-2">Specialty</label>
-                            <input type="text" id="specialty" name="specialty" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.specialty} onChange={handleChange} required />
+                            <label  className="block text-gray-700 font-bold mb-2">Specialty</label>
+                            <input type="text"  name="specialty" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.specialty} onChange={handleChange} required />
                         </div>
                         
                         <div>
@@ -71,19 +71,19 @@ const Register = () => {
                         
                         <div className="col-span-2">
                             <label  className="block text-gray-700 font-bold mb-2">Hospital</label>
-                            <input type="text" id="hospital" name="hospital" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.hospital} onChange={handleChange} required />
+                            <input type="text"  name="hospital" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.hospital} onChange={handleChange} required />
                         </div>
                         <div className="col-span-2">
-                            <label htmlFor="address" className="block text-gray-700 font-bold mb-2">Address</label>
-                            <input type="text" id="address" name="address" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.address} onChange={handleChange} required />
+                            <label  className="block text-gray-700 font-bold mb-2">Address</label>
+                            <input type="text"  name="address" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.address} onChange={handleChange} required />
                         </div>
                         <div>
-                            <label htmlFor="phoneNumber" className="block text-gray-700 font-bold mb-2">Phone Number</label>
-                            <input type="text" id="phoneNumber" name="phoneNumber" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.phoneNumber} onChange={handleChange} required />
+                            <label  className="block text-gray-700 font-bold mb-2">Phone Number</label>
+                            <input type="text" name="phoneNumber" className="border border-gray-300 rounded-md py-2 px-3 w-full" value={doctorInfo.phoneNumber} onChange={handleChange} required />
                         </div>
                         <div>
 
-                        <label htmlFor="phoneNumber" className="block text-gray-700 font-bold mb-2">Timing</label>
+                        <label  className="block text-gray-700 font-bold mb-2">Timing</label>
                         <TimePicker.RangePicker className='border border-gray-300 rounded-md py-2 px-3 w-full ' onChange={handleTimeChange}/>
                         </div>
                     </div>
