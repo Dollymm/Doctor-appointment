@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import  { useState } from 'react';
 import Card from '@mui/material/Card';
 import {TimePicker} from 'antd'
-import { Link } from 'react-router-dom';
 
 
 const Register = () => {
@@ -13,7 +12,10 @@ const Register = () => {
         experience:'',
         address: '',
         phoneNumber: '',
-        timing:[],
+        timing:{
+            start:"",
+            end:""
+        },
     });
 
     const handleChange = (e) => {
@@ -21,28 +23,34 @@ const Register = () => {
         setDoctorInfo((prevDoctorInfo) => ({ ...prevDoctorInfo, [name]: value }));
     };
 
-    const handleTimeChange=(value)=>{
-        
-        const formattedTime = value.map(time => moment(time).format('HH:mm')); 
-        setDoctorInfo((prevDoctorInfo)=>({...prevDoctorInfo,timing:formattedTime}))
-        console.log('selected Time Range:',value)
-       
-    }
     const handleSubmit = (e) => {
         e.preventDefault();
       
         console.log('Doctor information submitted:', doctorInfo);
      
-        setDoctorInfo({
-            name: '',
-            email: '',
-            specialty: '',
-            hospital: '',
-            experience:'',
-            address: '',
-            phoneNumber: '',
-        });
+        // setDoctorInfo({
+        //     name: '',
+        //     email: '',
+        //     specialty: '',
+        //     hospital: '',
+        //     experience:'',
+        //     address: '',
+        //     phoneNumber: '',
+        // });
     };
+
+    const handleTime=(time,timeString)=>{
+        console.log("time",time)
+        console.log("time String",timeString[1])
+
+        setDoctorInfo(pre=>({
+            ...pre,
+            timing:{
+                start:timeString[0],
+                end:timeString[1]
+            }
+        }))
+    }
 
     return (
         <div className='flex justify-center items-center mt-10 '>
@@ -84,7 +92,7 @@ const Register = () => {
                         <div>
 
                         <label  className="block text-gray-700 font-bold mb-2">Timing</label>
-                        <TimePicker.RangePicker className='border border-gray-300 rounded-md py-2 px-3 w-full ' onChange={handleTimeChange}/>
+                        <TimePicker.RangePicker className='border border-gray-300 rounded-md py-2 px-3 w-full ' onChange={handleTime}/>
                         </div>
                     </div>
                     <button type="submit" className="bg-blue-500 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline hover:bg-blue-600 flex justify-center items-center w-1/2 mx-auto mt-4">Register</button>
