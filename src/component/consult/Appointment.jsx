@@ -34,14 +34,14 @@ const Appointment = () => {
     <div>
       <NavBar />
       <ChildNav />
-      <div className="flex flex-col md:flex-row  justify-center ">
+      <div className="flex flex-col md:flex-row  justify-center   ">
       <div className=" md:w-1/2 h-[500px] max-w-md mx-auto bg-gray-200 shadow-md rounded-lg overflow-hidden mt-8 flex flex-col">
   
   <div className="bg-blue-500 text-white py-4 px-6">
     <p className="font-bold text-lg">👋Hello, I'm Doctor Gen. How can I help you?</p>
   </div>
 
-  <div  className="flex-1 px-6 py-4 overflow-y-auto">
+  <div  className="flex-1 px-6 py-4 overflow-y-auto ">
     {data.map((item, index) => {
       return (
         <>
@@ -79,7 +79,7 @@ const Appointment = () => {
 
 
 
-<div className="md:w-1/2">
+<div className="md:w-1/2 mt-4 ml-3">
           <h1 className="text-2xl">You can also consult these</h1>
           {problem.map((issue, id) => (
             <div key={id} className="bg-white border rounded-lg shadow-md p-4 mb-4 md:w-[600px]">
