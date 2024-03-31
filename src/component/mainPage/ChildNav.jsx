@@ -7,6 +7,7 @@ import AccountCircleIcon from '@mui/icons-material/AccountCircle';
 import { Drawer, List, ListItem, ListItemIcon, ListItemText, IconButton } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { Link } from 'react-router-dom';
 
 const ChildNav = () => {
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
@@ -17,12 +18,12 @@ const ChildNav = () => {
 
   return (
     <div>
-      {/* Button to open drawer on small screens */}
+     
       <IconButton onClick={toggleDrawer} sx={{ display: { lg: 'none', md: 'none' } }}>
         <MenuIcon />
       </IconButton>
 
-      {/* Navigation for small screens (Drawer) */}
+  
       <Drawer
         anchor="left"
         variant="temporary"
@@ -66,7 +67,7 @@ const ChildNav = () => {
       {/* Navigation for large screens */}
       <div className="hidden md:flex justify-evenly items-center bg-violet-200 h-[60px] font-semibold text-lg">
         <div>
-          <p className="flex items-center"><CalendarMonthIcon />Book Appointment</p>
+          <Link to='/allDoc' className="flex items-center"><CalendarMonthIcon />Book Appointment</Link>
         </div>
         <div>
           <p className="flex items-center"><MedicalServicesIcon />Treatment</p>

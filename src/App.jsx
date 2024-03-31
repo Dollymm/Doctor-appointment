@@ -4,6 +4,11 @@ import Home from './pages/Home'
 import Login from './pages/Login'
 import Register from './pages/Register'
 import Footer from './pages/Footer'
+import AllDoc from './component/health/AllDoc'
+import Appointment from './component/consult/Appointment'
+
+import { DoctorsAppoitment } from './component/consult/DoctorsAppoitment'
+
 
 const App = () => {
   return (
@@ -13,6 +18,10 @@ const App = () => {
         <Route path='/login' element={<Login/>}/>
         <Route path='/register' element={<Register/>}/>
         <Route path='/footer' element={<Footer/>}/>
+        <Route path='/allDoc' element={<AllDoc/>}/>
+        <Route path='/appointment' element={<Appointment/>}/>
+        
+        <Route path='/doctor' element={<DoctorsAppoitment/>}/>
       </Routes>
     </BrowserRouter>
   )

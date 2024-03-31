@@ -68,7 +68,7 @@ const Register = () => {
 
   return (
     <div className="flex justify-center items-center mt-10 ">
-      <Card className="w-[700px] p-6 bg-white rounded-lg shadow-md">
+      <Card  style={{ backgroundColor: '#E5E7EB' }} className="w-[700px] p-6  rounded-lg shadow-md">
         <h1 className="text-2xl font-bold mb-2 text-center">
           Doctor Registration
         </h1>

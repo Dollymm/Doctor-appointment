@@ -1,7 +1,12 @@
 import React from 'react';
 import {data} from '../../../data';
+import { useNavigate } from 'react-router-dom';
 
 const Consult = () => {
+  const navigate=useNavigate();
+  const handleConsultNowClick=()=>{
+    navigate('/appointment')
+  }
   return (
     <div className=" py-10">
       <div className="container mx-auto">
@@ -18,7 +23,7 @@ const Consult = () => {
             <div key={id} className="text-center bg-blue-900 p-6 rounded-lg shadow-md">
               <img src={item.img} alt={item.description} className="mx-auto w-24 h-24 rounded-full mb-4" />
               <p className="text-lg font-semibold mb-2 text-white">{item.description}</p>
-              <button className=" border boder-indigo-500 bg-white hover:bg-blue-900 hover:text-white  text-black font-semibold py-2 px-4 rounded-full">
+              <button className=" border boder-indigo-500 bg-white hover:bg-blue-900 hover:text-white  text-black font-semibold py-2 px-4 rounded-full" onClick={handleConsultNowClick}>
                 Consult Now
               </button>
             </div>

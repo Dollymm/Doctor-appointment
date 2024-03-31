@@ -58,5 +58,45 @@ export const doctor=[
         hospital:'Saravni Hostipitasl,Hyderabad'
     }
 ]
+export const problem =[
+    {
+        id:'1',
+        issues:'Acne/Pimple',
+        symtoms:{
+            '1':'Crusting of skin bumps',
+            '2':'Pustules (small red bumps containing white or yellow pus)',
+            '3':'Redness around the skin eruptions.',
+            '4':'Scarring of the skin.',
+            '5':'Whiteheads',
+            '6':'Blackheads.'
+        }
+    },
+    {
+
+        id:'2',
+        issues:'Depression ',
+        symtoms:{
+            '1':'Feelings of sadness, tearfulness, emptiness or hopelessness',
+            '2':'Angry outbursts, irritability or frustration, even over small matters',
+            '3':'feeling hopeless and helpless',
+            '4':'having no motivation or interest in things',
+            '5':'finding it difficult to make decisions'
+        },
+    },
+        {
+
+        id:'3',
+        issues:'Hair Fall',
+        symtoms:{
+            '1':'Intense itching',
+            '2':'burning, and tenderness',
+            '3':'Sudden loosening of hair',
+            '4':'Patches of scaling that spread over the scalp',
+            
+        },
+    
+    }
+
+]
 
 
