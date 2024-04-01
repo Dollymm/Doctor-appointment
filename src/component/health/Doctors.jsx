@@ -4,6 +4,7 @@ import axios from 'axios';
 import { DoctorsAppoitment } from '../consult/DoctorsAppoitment';
 import { useDispatch } from 'react-redux';
 import { id } from '../../redux/features/doctorSlice';
+import ConfirmAppoitment from '../../models/ConfirmAppoitment';
 
 const Doctors = () => {
   const navigate = useNavigate();
@@ -17,6 +18,16 @@ const Doctors = () => {
   const [doctorPerPage, setDoctorPerPage] = useState(5);
   const [selectedDoctor, setSelectedDoctor] = useState(null) 
   const [selectedDoctorId,setSelectedDoctorId]=useState(null)
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const handleOpen = () => {
+    setIsOpen(true);
+  };
+
+  const handleClose = () => {
+    setIsOpen(false);
+  };
+
   const dispatch=useDispatch()
 
   useEffect(() => {
@@ -59,7 +70,9 @@ const handleViewProfileClick = (doctor) => {
             <div className="md:w-1/4 md:mr-4 md:text-center mb-4 md:mb-0">
               <img src='https://as2.ftcdn.net/v2/jpg/02/60/04/09/1000_F_260040900_oO6YW1sHTnKxby4GcjCvtypUCWjnQRg5.jpg' className="w-24 h-24 rounded-full mx-auto mb-4 md:mb-0" alt="Doctor Image" />
              
-              <div className="text-center text-white font-bold" onClick={() => handleViewProfileClick(dr)}>View Profile</div>
+              <div className="text-center text-white font-bold" onClick={() => handleViewProfileClick(dr)}>
+                <button>View profile</button>
+              </div>
             </div>
             <div className="md:w-3/4 ml-4">
               <h3 className="text-xl font-semibold mb-2">Dr. {dr.name}</h3>
@@ -74,13 +87,14 @@ const handleViewProfileClick = (doctor) => {
               <h3 className="font-semibold mb-1">Consultation Fee</h3>
               <div className="font-bold">₹ 299/-</div>
             </div>
-            <button className="button-2 font-semibold border boder-indigo-500 bg-white hover:bg-blue-900 hover:text-white text-black px-4 py-2 rounded-lg transition duration-300">Consult Now</button>
+            <button className="button-2 font-semibold border boder-indigo-500 bg-white hover:bg-blue-900 hover:text-white text-black px-4 py-2 rounded-lg transition duration-300" onClick={handleClose}>Book Appointment</button>
           </div>
         </div>
       ))}
       <div className="flex justify-center">
         <button  className="border border-indigo-800 hover:bg-blue-900 hover:text-white text-black rounded-lg px-2 py-2 font-semibold transition duration-300 w-48" onClick={handleDoctorNowClick}>View more</button>
       </div>
+      <ConfirmAppoitment isOpen={isOpen} onClose={handleClose}/>
       
       {/* {openProfile && <DoctorsAppoitment isprofileOpen={profileOpen} ProfileClose={closeProfile}/>} */}
     </div>

@@ -24,7 +24,7 @@ const Consult = () => {
               <img src={item.img} alt={item.description} className="mx-auto w-24 h-24 rounded-full mb-4" />
               <p className="text-lg font-semibold mb-2 text-white">{item.description}</p>
               <button className=" border boder-indigo-500 bg-white hover:bg-blue-900 hover:text-white  text-black font-semibold py-2 px-4 rounded-full" onClick={handleConsultNowClick}>
-                Consult Now
+              Ask Gen Doctor
               </button>
             </div>
           ))}
