@@ -7,9 +7,18 @@ import SchoolIcon from '@mui/icons-material/School';
 import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import ConfirmAppoitment from "../../models/ConfirmAppoitment";
+import { useSelector } from "react-redux";
+
+
 export const DoctorsAppoitment = () => {
+  const doctorID=useSelector((state)=>state.doctor.currentId)
+  console.log( 'doctors id:',doctorID)
+
   const [isExpanded, setIsExpanded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false); 
+
+
+  
    const openModal = () => {
         setModalOpen(true);
     };
@@ -22,6 +31,9 @@ export const DoctorsAppoitment = () => {
   const toggleExpanded = () => {
     setIsExpanded(!isExpanded);
   };
+  
+// localStorage.clear()
+
 
   return (
     <>
@@ -49,10 +61,10 @@ export const DoctorsAppoitment = () => {
                 
               </div>
               <div className="md:w-3/4 ml-4">
-                <h3 className="text-xl font-semibold mb-2">Dr. Dolly mamgai</h3>
-                <div className="text-sm mb-2">5year of Experience</div>
+                <h3 className="text-xl font-semibold mb-2">Dr. {doctorID.name}</h3>
+                <div className="text-sm mb-2">{doctorID.experience} of experience</div>
                 <div className="text-sm mb-2"></div>
-                <div className="text-sm mb-2">Srinagar hostiptial</div>
+                <div className="text-sm mb-2">{doctorID.hospital}</div>
                 <div className="flex gap-3">
                   <p>💵₹500 at clinic</p>
                   <p>💳₹300 online</p>
@@ -90,7 +102,7 @@ export const DoctorsAppoitment = () => {
   <div className="bg-white border rounded-lg shadow-md p-4 mb-4 flex justify-center flex-col">
       <div className="mb-4">
         <h2 className="text-lg font-bold flex items-center"><span className="bg-pink-400 rounded-full mr-2 "><AccountCircleIcon /></span>Speciality</h2>
-        <p className="ml-10">General Physician</p>
+        <p className="ml-10">{doctorID.spec}</p>
       </div>
       <div className="mb-4">
         <h2 className="text-lg font-bold flex items-center"><span className="bg-yellow-400 rounded-full mr-2 "><LocalHospitalIcon /></span>Other Treatment areas</h2>
@@ -165,7 +177,7 @@ export const DoctorsAppoitment = () => {
     </button>
   </div>
 </div>
-<ConfirmAppoitment isOpen={modalOpen} onClose={closeModal} />
+<ConfirmAppoitment isOpen={modalOpen} onClose={closeModal}  setModelOpe={setModalOpen}/>
 
 
             </div>

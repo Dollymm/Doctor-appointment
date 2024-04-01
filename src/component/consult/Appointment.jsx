@@ -9,6 +9,8 @@ const Appointment = () => {
   const [message, setMessage] = useState("");
   const [genMessage, setGenMessage] = useState("");
 
+  
+
   const [data, setData] = useState([]);
   const handlePrompt = (e) => {
     // console.log(e.target.value)

@@ -1,8 +1,8 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
-const ConfirmAppoitment = ({ isOpen, onClose }) => {
-  if (!isOpen) return null;
+const ConfirmAppoitment = ({isOpen,onClose}) => {
+  if(!isOpen) return null
   const [formData, setFormData] = useState({
     name: "",
     issue: "",
@@ -19,7 +19,7 @@ const ConfirmAppoitment = ({ isOpen, onClose }) => {
   const handleSubmit=(e)=>{
     e.preventDefault();
     console.log('form is submit:',formData)
-    onclose
+   
   }
 
   return (
