@@ -55,7 +55,7 @@ const Appointment = () => {
   </div>
 </div>
 
-<div key={index} class="mb-2 flex justify-start">
+<div key={index} className="mb-2 flex justify-start">
   <div className="bg-gray-300 text-gray-800 rounded-lg px-4 py-2 max-w-[70%]">
     <p className="font-semibold">Gen</p>
     <p>{genMessage}</p>

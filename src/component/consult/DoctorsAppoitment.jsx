@@ -16,10 +16,12 @@ export const DoctorsAppoitment = () => {
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false); 
+  const [doc,setDoc]=useState()
 
 
   
-   const openModal = () => {
+   const openModal = (doctor) => {
+    setDoc(doctor)
         setModalOpen(true);
     };
 
@@ -172,12 +174,12 @@ export const DoctorsAppoitment = () => {
     <button className="font-semibold border border-indigo-500 bg-white   text-black px-4 py-2 rounded-lg transition duration-300 mr-2 md:w-1/2">
       See all Timings
     </button>
-    <button onClick={openModal} className="font-semibold border border-indigo-500 bg-blue-900 hover:bg-white text-white hover:text-black px-4 py-2 rounded-lg transition duration-300 ml-2 md:w-1/2">
+    <button onClick={()=>openModal(doctor)} className="font-semibold border border-indigo-500 bg-blue-900 hover:bg-white text-white hover:text-black px-4 py-2 rounded-lg transition duration-300 ml-2 md:w-1/2">
       Book Appointment
     </button>
   </div>
 </div>
-<ConfirmAppoitment isOpen={modalOpen} onClose={closeModal}  setModelOpe={setModalOpen}/>
+<ConfirmAppoitment isOpen={modalOpen} onClose={closeModal}  doc={doc}/>
 
 
             </div>

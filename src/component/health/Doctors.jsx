@@ -8,6 +8,7 @@ import ConfirmAppoitment from '../../models/ConfirmAppoitment';
 
 const Doctors = () => {
   const navigate = useNavigate();
+  const [doc,setDoc]=useState();
 
   const handleDoctorNowClick = () => {
     navigate('/allDoc');
@@ -20,7 +21,8 @@ const Doctors = () => {
   const [selectedDoctorId,setSelectedDoctorId]=useState(null)
   const [isOpen, setIsOpen] = useState(false);
   
-  const handleOpen = () => {
+  const handleOpen = (dr) => {
+    setDoc(dr)
     setIsOpen(true);
   };
 
@@ -87,16 +89,15 @@ const handleViewProfileClick = (doctor) => {
               <h3 className="font-semibold mb-1">Consultation Fee</h3>
               <div className="font-bold">₹ 299/-</div>
             </div>
-            <button className="button-2 font-semibold border boder-indigo-500 bg-white hover:bg-blue-900 hover:text-white text-black px-4 py-2 rounded-lg transition duration-300" onClick={handleClose}>Book Appointment</button>
+            <button className="button-2 font-semibold border boder-indigo-500 bg-white hover:bg-blue-900 hover:text-white text-black px-4 py-2 rounded-lg transition duration-300" onClick={()=>handleOpen(dr)}>Book Appointment</button>
           </div>
         </div>
       ))}
       <div className="flex justify-center">
         <button  className="border border-indigo-800 hover:bg-blue-900 hover:text-white text-black rounded-lg px-2 py-2 font-semibold transition duration-300 w-48" onClick={handleDoctorNowClick}>View more</button>
       </div>
-      <ConfirmAppoitment isOpen={isOpen} onClose={handleClose}/>
+      <ConfirmAppoitment isOpen={isOpen} onClose={handleClose} doc={doc}/>
       
-      {/* {openProfile && <DoctorsAppoitment isprofileOpen={profileOpen} ProfileClose={closeProfile}/>} */}
     </div>
   );
 };
