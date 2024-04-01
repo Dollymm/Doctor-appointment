@@ -1,7 +1,7 @@
 import React from "react";
 import CloseIcon from "@mui/icons-material/Close";
 import { useState } from "react";
-const ConfirmAppoitment = ({isOpen,onClose}) => {
+const ConfirmAppoitment = ({isOpen,onClose,doc}) => {
   if(!isOpen) return null
   const [formData, setFormData] = useState({
     name: "",
@@ -21,6 +21,8 @@ const ConfirmAppoitment = ({isOpen,onClose}) => {
     console.log('form is submit:',formData)
    
   }
+
+
 
   return (
     <div className="fixed inset-0 z-50 flex justify-center items-center bg-black bg-opacity-50">
@@ -45,6 +47,8 @@ const ConfirmAppoitment = ({isOpen,onClose}) => {
         type="text"
         id="name"
         name="name"
+        value={doc.name}
+        readOnly
       />
     </div>
     <div className="w-full md:w-1/2 md:pl-2">
@@ -52,6 +56,8 @@ const ConfirmAppoitment = ({isOpen,onClose}) => {
       <input
         className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
         type="text"
+        value={doc.spec}
+        readOnly
       />
     </div>
     <div className="w-full md:w-1/2 mb-4 md:mb-0 md:pr-2">
@@ -59,6 +65,7 @@ const ConfirmAppoitment = ({isOpen,onClose}) => {
       <input
         className="w-full px-3 py-2 border rounded-md focus:outline-none focus:border-blue-500"
         type="text"
+        value={`${doc.timing[0].start} - ${doc.timing[0].end}`} readOnly
       />
     </div>
   </div>
