@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import NavBar from "../mainPage/NavBar";
 import ChildNav from "../mainPage/ChildNav";
 import AccountCircleIcon from '@mui/icons-material/AccountCircle';
@@ -11,8 +11,8 @@ import { useSelector } from "react-redux";
 
 
 export const DoctorsAppoitment = () => {
-  const doctorID=useSelector((state)=>state.doctor.currentId)
-  console.log( 'doctors id:',doctorID)
+  const doctor=useSelector((state)=>state.currentId)
+  console.log( 'doctors id:',doctor)
 
   const [isExpanded, setIsExpanded] = useState(false);
   const [modalOpen, setModalOpen] = useState(false); 
@@ -61,10 +61,10 @@ export const DoctorsAppoitment = () => {
                 
               </div>
               <div className="md:w-3/4 ml-4">
-                <h3 className="text-xl font-semibold mb-2">Dr. {doctorID.name}</h3>
-                <div className="text-sm mb-2">{doctorID.experience} of experience</div>
+                <h3 className="text-xl font-semibold mb-2">Dr. {doctor.name}</h3>
+                <div className="text-sm mb-2">{doctor.experience} of experience</div>
                 <div className="text-sm mb-2"></div>
-                <div className="text-sm mb-2">{doctorID.hospital}</div>
+                <div className="text-sm mb-2">{doctor.hospital}</div>
                 <div className="flex gap-3">
                   <p>💵₹500 at clinic</p>
                   <p>💳₹300 online</p>
@@ -102,7 +102,7 @@ export const DoctorsAppoitment = () => {
   <div className="bg-white border rounded-lg shadow-md p-4 mb-4 flex justify-center flex-col">
       <div className="mb-4">
         <h2 className="text-lg font-bold flex items-center"><span className="bg-pink-400 rounded-full mr-2 "><AccountCircleIcon /></span>Speciality</h2>
-        <p className="ml-10">{doctorID.spec}</p>
+        <p className="ml-10">{doctor.spec}</p>
       </div>
       <div className="mb-4">
         <h2 className="text-lg font-bold flex items-center"><span className="bg-yellow-400 rounded-full mr-2 "><LocalHospitalIcon /></span>Other Treatment areas</h2>
@@ -142,7 +142,7 @@ export const DoctorsAppoitment = () => {
 <div>
     <p className="text-2xl font-bold">Clinic Location</p>
     <div className="bg-white border rounded-lg shadow-md p-4 mb-4">
-        <p>7,Siri,road Srinagar</p>
+        <p>{doctor.address}</p>
     </div>
 </div>
 
@@ -150,7 +150,7 @@ export const DoctorsAppoitment = () => {
             <div className="w-full md:w-1/2 ">
             <div>
             <div>
-                <h1>Book Clinic Appointment with Dr. Dolly Mamgai</h1>
+                <h1>Book Clinic Appointment with Dr. {doctor.name}</h1>
   
                 <div className="bg-white border border-blue-900 rounded-lg shadow-md p-4 mb-4 ml-3 mt-5">
   <div className="flex items-center">
@@ -163,8 +163,8 @@ export const DoctorsAppoitment = () => {
     />
   </div>
     <div className="ml-4">
-      <p className="font-semibold">Sama Hospital</p>
-      <p className="text-gray-500">7, Siri Fort Road</p>
+      <p className="font-semibold">{doctor.hospital}</p>
+      <p className="text-gray-500">{doctor.address}</p>
       <p className="text-gray-500">💵 ₹500 at clinic</p>
     </div>
   </div>
