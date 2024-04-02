@@ -3,7 +3,7 @@ import NavBar from '../component/mainPage/NavBar'
 import ChildNav from '../component/mainPage/ChildNav'
 import Center from '../component/mainPage/Center'
 import Consult from '../component/health/Consult'
-// import Footer from './Footer'
+import Footer from './Footer'
 import Doctors from '../component/health/Doctors'
 const Home = () => {
   return (
@@ -12,7 +12,7 @@ const Home = () => {
     <Center/>
     <Consult/>
     <Doctors/>
-    {/* <Footer/> */}
+    <Footer/>
     </>
   )
 }

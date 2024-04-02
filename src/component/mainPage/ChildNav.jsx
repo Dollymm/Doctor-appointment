@@ -41,22 +41,21 @@ const ChildNav = () => {
           <CloseIcon  />
         </IconButton>
         <List className='h-full text-white  bg-blue-900 '>
-          <ListItem >
-            <ListItemIcon><CalendarMonthIcon className='text-white' /></ListItemIcon>
-            <ListItemText primary="Book Appointment" />
-          </ListItem>
+        <ListItem component={Link} to="/allDoc">
+  <ListItemIcon>
+    <CalendarMonthIcon className='text-white' />
+  </ListItemIcon>
+  <ListItemText primary="Book Appointment" />
+</ListItem>
           <ListItem >
             <ListItemIcon><MedicalServicesIcon className='text-white' /></ListItemIcon>
             <ListItemText primary="Treatment" />
           </ListItem>
-          <ListItem >
+          <ListItem component={Link} to='/about' >
             <ListItemIcon><QuestionAnswerIcon  className='text-white'/></ListItemIcon>
-            <ListItemText primary="Ask a Question" />
+            <ListItemText primary="About Us" />
           </ListItem>
-          <ListItem >
-            <ListItemIcon><AccountCircleIcon  className='text-white'/></ListItemIcon>
-            <ListItemText primary="Plan My Surgery" />
-          </ListItem>
+        
           <ListItem >
             <ListItemIcon><FeedIcon  className='text-white'/></ListItemIcon>
             <ListItemText primary="Health Feed" />
@@ -73,11 +72,11 @@ const ChildNav = () => {
           <p className="flex items-center"><MedicalServicesIcon />Treatment</p>
         </div>
         <div>
-          <p className="flex items-center"><QuestionAnswerIcon />Ask a Question</p>
+          <Link to='/about' className="flex items-center"><QuestionAnswerIcon />About Us</Link>
         </div>
-        <div>
+        {/* <div>
           <p className="flex items-center"><AccountCircleIcon />Plan My Surgery</p>
-        </div>
+        </div> */}
         <div>
           <p className="flex items-center"><FeedIcon />Health Feed</p>
         </div>

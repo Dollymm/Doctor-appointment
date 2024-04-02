@@ -1,0 +1,12 @@
+.bg-customs {
+    /* Existing styles */
+    background-image: url('https://st4.depositphotos.com/13324256/20447/i/380/depositphotos_204477842-stock-photo-selective-focus-stethoscope-glass-surface.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; /* Ensure the entire image is visible without distortion */
+    background-position: center; /* Center the background image */
+    position: relative;
+    z-index: 1;
+    height: 50vh; /* Cover entire viewport height */
+    width: 95vw;
+
+}

@@ -8,6 +8,7 @@ import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import RecordVoiceOverIcon from '@mui/icons-material/RecordVoiceOver';
 import ConfirmAppoitment from "../../models/ConfirmAppoitment";
 import { useSelector } from "react-redux";
+import Footer from "../../pages/Footer";
 
 
 export const DoctorsAppoitment = () => {
@@ -191,6 +192,7 @@ export const DoctorsAppoitment = () => {
           </div>
         </div>
       </div>
+      <Footer/>
     </>
   );
 };

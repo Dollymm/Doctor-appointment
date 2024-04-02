@@ -4,6 +4,7 @@ import NavBar from "../mainPage/NavBar";
 import Center from "../mainPage/Center";
 import ChildNav from "../mainPage/ChildNav";
 import { problem } from "../../../data";
+import Footer from "../../pages/Footer";
 
 const Appointment = () => {
   const [message, setMessage] = useState("");
@@ -97,6 +98,7 @@ const Appointment = () => {
         </div>
     
   </div>
+  
 </div>
 
     

@@ -11,15 +11,11 @@ const NavBar = () => {
           </p>
           <div>
             <ul className="flex gap-4 md:gap-7 font-bold md:flex-row md:mt-0">
-            <li className="text-white hover:text-blue-700 transition duration-300 mt-2 md:mt-1">
-                {/* Use the Material-UI Link component */}
-                <Link to='/register' className="text-white hover:text-blue-700 transition duration-300">
-                  For Doctor
-                </Link>
-              </li>
+            
+            
               
               <li className="text-indigo-700 mr-2 hover:text-blue-700 transition duration-300 border border-black rounded-full px-2 py-1 bg-white shadow-md hover:shadow-lg md:mr-0 md:mt-0 md:w-auto md:px-4 md:py-2 md:text-base text-sm">
-                Book Appointment
+              <Link to='/register'>Doctor Registration</Link>
               </li>
               
             </ul>
