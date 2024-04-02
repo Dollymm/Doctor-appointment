@@ -56,7 +56,7 @@ const ChildNav = () => {
             <ListItemText primary="About Us" />
           </ListItem>
         
-          <ListItem >
+          <ListItem component={Link} to='/feed'>
             <ListItemIcon><FeedIcon  className='text-white'/></ListItemIcon>
             <ListItemText primary="Health Feed" />
           </ListItem>
@@ -78,7 +78,7 @@ const ChildNav = () => {
           <p className="flex items-center"><AccountCircleIcon />Plan My Surgery</p>
         </div> */}
         <div>
-          <p className="flex items-center"><FeedIcon />Health Feed</p>
+          <Link to='/feed' className="flex items-center"><FeedIcon />Health Feed</Link>
         </div>
       </div>
     </div>

@@ -9,6 +9,7 @@ import Appointment from './component/consult/Appointment'
 
 import { DoctorsAppoitment } from './component/consult/DoctorsAppoitment'
 import Aboutus from './pages/Aboutus'
+import HealthFeed from './pages/HealthFeed'
 
 
 const App = () => {
@@ -24,6 +25,7 @@ const App = () => {
         
         <Route path='/doctor' element={<DoctorsAppoitment/>}/>
         <Route path='/about' element={<Aboutus/>}/>
+       <Route path='/feed' element={<HealthFeed/>}/>
         <Route path='/footer' element={<Footer/>}/>
       </Routes>
     </BrowserRouter>

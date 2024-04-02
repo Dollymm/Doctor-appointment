@@ -98,5 +98,26 @@ export const problem =[
     }
 
 ]
+export const health=[
+    {
+        ques:' Hey doctors, I am 20 years old and my weight is 80 kg So I want to lose weight clove cinnamon or cumin I use it on an empty stomach with 1 cup of hot water So will it help me burn fat',
+  dr:'Dt. Ruchi Sharma',
+  education:'BSC,MSC -Home Science',
+  spec:'Dietitian/Nutrationist Banglore 8 Year Exp',
+  img:'https://media.istockphoto.com/id/168400647/photo/fruit-and-vegetables-basket.jpg?s=612x612&w=0&k=20&c=2n1Zys2s7qXRVU_hfAuRZtkFUnDdxHCIqZS2xKIN1Gc=',
 
+   ans:'Hello yes these things may help you to increase metabolism but not exactly reduce weight. You have to follow a holistic approach for good results'
+},
+    {
+        ques:'I had a puppp rashes on my 8 month pregnancy belly, is it safe to use itch guard cream?',
+  dr:'Dt. Sanchika Gupta',
+  education:'MBBS, MD Dermatology',
+  spec:'Dermatologist• Faridabad 11 Years Exp',
+  img:'https://media.allure.com/photos/61e74bc1a4f7942f4cfd7152/16:9/w_2560%2Cc_limit/Radiofrequency.jpg',
+
+   ans:'Hi, I will not advice using itch guard cream for puppp. Its irrelevant, itchguard is an anti fungal.Regards'
+},
+   
+
+]
 
